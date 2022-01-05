@@ -16,10 +16,14 @@ button:hover {
 }
 
   header {
+    position: sticky; /* фиксируем шапку к верхней границе браузера */
+    top: 0;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    z-index: 1; /* расположение элемента выше осталдьных */
   }
   body {
     font-family: 'Raleway', sans-serif;
@@ -78,11 +82,29 @@ button:hover {
 .about_image {
     width: 500px
 }  
-
+/* стиль изображения солнышка */
 .about_sun—image {
+  position: absolute;
+  top: 0;
     width: 70px;
     height: 70px;
+    animation-name: rotation; /* задаем имя анимации rotation */
+    animation-duration: 10s; /* длительность анимации 10с */
+    animation-iteration-count: infinite; /* количество повторений - зациклено */
+    animation-timing-function: linear;  /**/
 }
+
+@keyframes rotation { /* условия анимации объекта с именем rotation */
+  0%{
+    transform: rotate(0deg);  /* начало анимации */
+  }
+  
+  100%{
+    transform: rotate(360deg);  /* конец анимации */
+  }
+
+}
+
 /* ---------------------------------------- */
 
 .form {
@@ -192,4 +214,74 @@ footer {
   opacity: 0.5;
 }
   
+/* адаптивная верстка проекта */
+@media (max-width: 1024px) {
+  .about {
+      padding: 115px 20px;
+  }
 
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+}
+/* ----- 320 ----- */
+@media (max-width: 720px) {
+  header {
+      padding: 10px;
+  }
+
+  .header__logo {
+      height: 20px;
+  }
+
+  header a {
+      margin-right: 10px;
+  }
+
+  .about {
+      flex-direction: column-reverse;
+      padding: 50px 10px;
+  }
+
+  .about h1 {
+      font-size: 36px;
+      line-height: 40px;
+  }
+
+  .about__image {
+      width: 280px;
+  }
+
+  .about__sun-image {
+      width: 75px;
+      height: 75px;
+  }
+
+  .form {
+      padding: 50px 10px;
+  }
+
+  .form h1 {
+      font-size: 36px;
+  }
+
+  footer {
+      padding: 50px 10px;
+  }
+
+  .footer__container {
+      flex-direction: column;
+  }
+}
+/* Попытка изменить разрешение картинки солнечных батарей при адаптивнорй верстке 
+- разрешение меньше 500px */

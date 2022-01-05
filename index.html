@@ -2,6 +2,16 @@
 <html lang="ru">
 
 <head>
+  <!-- для адаптивной верстки -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- подключение библиотеки с иконками fontawesome.com -->
+  <link rel="stylesheet" 
+  href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- Подключение библиотеки с анимацией Animate -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
   <title>Солнечные батареи GreenCorp</title>
   <link rel="stylesheet" href="main.css">
 </head>
@@ -17,11 +27,7 @@
       <a href="#contacts">Контакты</a>
       <button>Заказать</button>
       <div class="tablica">
-        <div class="tablica-porydkovi-nomer">
-
-
-        </div>
-
+        <div class="tablica-porydkovi-nomer"></div>
       </div>
     </div>
   </header>
@@ -29,17 +35,17 @@
   <!-- -------------------------------------------------- -->
 
   <section class="about">
-
-    <div class="about__info">
+    <!-- Первый блок заголовка с классом анимации animate__animated -->
+    <div class="about__info animate__animated animate__fadeInLeft">
       <h1>Солнечные панели GreenRobotic</h1>
       <p>Производите
         дешёвую экологически
         чистую электроэнергию из
         солнечного света</p>
-      <button>Узнать подробнее</button>
+      <button>Узнать подробнее<i class="fas fa-chevron-right"></i></button>
     </div>
-
-    <div class="about_images">
+    <!-- Второй блок заголовка с классом анимации animate__animated -->
+    <div class="about_images animate__animated animate__fadeInRight">
       <img class="about_sun—image" src="img/sun.png">
       <img class="about_image" src="img/solar-panel.png">
     </div>
